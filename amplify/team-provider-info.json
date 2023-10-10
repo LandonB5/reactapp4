@@ -17,6 +17,9 @@
       },
       "api": {
         "reactapp4": {}
+      },
+      "storage": {
+        "s3b7feaa08": {}
       }
     }
   }
