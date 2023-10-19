@@ -137,8 +137,8 @@ const App = ({ signOut }) => {
  <p><Text as="strong" color={'#666699'}>More about this:</Text></p>
 <ul>
 <li>All of my notes are short reminders for users.</li>
-<li>Overall this now serves as more of a todo or little reminder list!</li>
-<li>If you want to see a notes app, go <a href="https://master.d3mlatfxeg8eej.amplifyapp.com/">Notes App</a>.</li>
+<li>Overall this now serves as a todo or little reminder list!</li>
+<li>If you want to see a another notes app, go <a href="https://master.d3mlatfxeg8eej.amplifyapp.com/">Notes App</a>.</li>
 </ul>
 <View margin="3rem 0">
 {notes.map ( (note) => (
