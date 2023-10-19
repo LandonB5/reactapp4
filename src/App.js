@@ -101,7 +101,7 @@ const App = ({ signOut }) => {
 
   return (
     <View className="App">
-      <Heading level={1}>My Notes App</Heading>
+      <Heading level={1}>Quick Reminder App</Heading>
       <View as="form" margin="3rem 0" onSubmit={createNote}>
         <Flex direction="row" justifyContent="center">
           <TextField
@@ -136,9 +136,9 @@ const App = ({ signOut }) => {
  <table border="0.5px" align="center"><tbody><tr><td> 
  <p><Text as="strong" color={'#666699'}>More about this:</Text></p>
 <ul>
-<li>All of my notes are short quotes found online.</li>
-<li>Notice the note labels show where each was created!</li>
-<li>If you want to see a better site, go <a href="https://master.d3mlatfxeg8eej.amplifyapp.com/">Landon's</a>.</li>
+<li>All of my notes are short reminders for users.</li>
+<li>Overall this now serves as more of a todo or little reminder list!</li>
+<li>If you want to see a notes app, go <a href="https://master.d3mlatfxeg8eej.amplifyapp.com/">Notes App</a>.</li>
 </ul>
 <View margin="3rem 0">
 {notes.map ( (note) => (
