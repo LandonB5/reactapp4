@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Centered Text with Arrow Images</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            background-image: url('pexels-pixabay-531880.jpg'); /* Replace 'background.jpg' with your image file */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Prevents the background from scrolling with content */
+        }
+
+        .overlay {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2); /* Add a semi-transparent white background to the overlay */
+        }
+
+        .content {
+            text-align: center;
+            font-size: 48px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            position: absolute;
+            bottom: 20px;
+        }
+
+        .footer img {
+            width: 30px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="content">
+            <p>“You never lose until you actually give up.” -Mike Tyson.</p>
+        </div>
+    
+       
+    <div class="footer">
+        <a href="classOCT24hw1.html"><img src="backleftarrowcircularbutton_79585.png" alt="Left Arrow"></a>
+        <a href="classOCT24hw3.html"><img src="rightarrowcircularbutton_79554.png" alt="Right Arrow"></a>
+    </div>
+</body>
+</html>
