@@ -6,10 +6,11 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { getOverrideProps } from "./utils";
-import { Flex, Icon, Text } from "@aws-amplify/ui-react";
+import { getOverrideProps, useNavigateAction } from "./utils";
+import { Button, Flex, Icon, Text } from "@aws-amplify/ui-react";
 export default function NoteNavBar(props) {
   const { overrides, ...rest } = props;
+  const buttonOnClick = useNavigateAction({ type: "url", url: "/new" });
   return (
     <Flex
       gap="20px"
@@ -103,7 +104,7 @@ export default function NoteNavBar(props) {
           display="block"
           direction="column"
           justifyContent="unset"
-          width="170px"
+          width="119px"
           height="unset"
           gap="unset"
           alignItems="unset"
@@ -115,6 +116,19 @@ export default function NoteNavBar(props) {
           {...getOverrideProps(overrides, "Company")}
         ></Text>
       </Flex>
+      <Button
+        width="28px"
+        height="28px"
+        shrink="0"
+        size="small"
+        isDisabled={false}
+        variation="primary"
+        children="+"
+        onClick={() => {
+          buttonOnClick();
+        }}
+        {...getOverrideProps(overrides, "Button")}
+      ></Button>
     </Flex>
   );
 }

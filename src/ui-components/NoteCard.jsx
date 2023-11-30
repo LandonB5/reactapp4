@@ -9,14 +9,8 @@ import * as React from "react";
 import { getOverrideProps } from "./utils";
 import { Flex, Image, Text } from "@aws-amplify/ui-react";
 export default function NoteCard(props) {
-
-  
   const { note, overrides, ...rest } = props;
-
-  
-
   return (
-
     <Flex
       gap="0"
       direction="column"

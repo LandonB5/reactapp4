@@ -5,7 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
-import { FlexProps, IconProps, TextProps } from "@aws-amplify/ui-react";
+import { ButtonProps, FlexProps, IconProps, TextProps } from "@aws-amplify/ui-react";
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
 } | null;
@@ -24,6 +24,7 @@ export declare type NoteNavBarOverridesProps = {
     Logo40492326?: PrimitiveOverrideProps<TextProps>;
     "Frame 321"?: PrimitiveOverrideProps<FlexProps>;
     Company?: PrimitiveOverrideProps<TextProps>;
+    Button?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
 export declare type NoteNavBarProps = React.PropsWithChildren<Partial<FlexProps> & {
     overrides?: NoteNavBarOverridesProps | undefined | null;
