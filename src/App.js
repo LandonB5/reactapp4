@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css';
 import { withAuthenticator } from '@aws-amplify/ui-react';
-import {NoteNavBar, NoteCardCollection, NoteCreateForm, UINewNote} from "./ui-components";
+import {NoteNavBar, NoteCardCollection, NoteCreateForm, UICreateNote} from "./ui-components";
 import {Routes, Route} from 'react-router-dom'
 //import NewNote from './NewNote'
 
