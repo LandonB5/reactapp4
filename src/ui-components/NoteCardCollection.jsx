@@ -10,7 +10,7 @@ import { listNotes } from "../graphql/queries";
 import NoteCard from "./NoteCard";
 import { getOverrideProps } from "./utils";
 import { Collection, Pagination, Placeholder } from "@aws-amplify/ui-react";
-import { API,Storage } from "aws-amplify";
+import { API } from "aws-amplify";
 const nextToken = {};
 const apiCache = {};
 export default function NoteCardCollection(props) {
@@ -61,16 +61,6 @@ export default function NoteCardCollection(props) {
       newCache.push(...result.items);
       newNext = result.nextToken;
     }
-    const notesFromAPI = result.items
-       await Promise.all(
-              notesFromAPI.map(async (note) => {
-                if (note.image) {
-                  const url = await Storage.get(note.name);
-                  note.image = url;
-                }
-                return note;
-              })
-            );
     const cacheSlice = isPaginated
       ? newCache.slice((page - 1) * pageSize, page * pageSize)
       : newCache;
