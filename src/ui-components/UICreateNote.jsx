@@ -12,14 +12,14 @@ import { createNote } from "../graphql/mutations";
 import { getOverrideProps, useNavigateAction } from "./utils";
 import { Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function UICreateNote(props) {
-  const { overrides, ...rest } = props;
+  const { textfeild, overrides, ...rest } = props;
   const authAttributes = useAuth().user?.attributes ?? {};
   const buttonOnClick = async () => {
     await API.graphql({
       query: createNote.replaceAll("__typename", ""),
       variables: {
         input: {
-          name: "Input41161437",
+          name: "TextField41161433",
           description: "Input42262443",
           image: "Input41161451",
           author: authAttributes["email"],

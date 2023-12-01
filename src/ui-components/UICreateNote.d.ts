@@ -51,6 +51,8 @@ export declare type UICreateNoteOverridesProps = {
     label41161458?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type UICreateNoteProps = React.PropsWithChildren<Partial<FlexProps> & {
+    textfeild?: String;
+} & {
     overrides?: UICreateNoteOverridesProps | undefined | null;
 }>;
 export default function UICreateNote(props: UICreateNoteProps): React.ReactElement;
