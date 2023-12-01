@@ -6,10 +6,28 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { getOverrideProps } from "./utils";
+import { useAuth } from "@aws-amplify/ui-react/internal";
+import { API } from "aws-amplify";
+import { createNote } from "../graphql/mutations";
+import { getOverrideProps, useNavigateAction } from "./utils";
 import { Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
-export default function UIEditNote(props) {
-  const { note, overrides, ...rest } = props;
+export default function UICreateNote(props) {
+  const { overrides, ...rest } = props;
+  const authAttributes = useAuth().user?.attributes ?? {};
+  const buttonOnClick = async () => {
+    await API.graphql({
+      query: createNote.replaceAll("__typename", ""),
+      variables: {
+        input: {
+          name: "Input41161437",
+          description: "Input42262443",
+          image: "Input41161451",
+          author: authAttributes["email"],
+        },
+      },
+    });
+  };
+  const buttonOnMouseLeave = useNavigateAction({ type: "url", url: "/" });
   return (
     <Flex
       gap="16px"
@@ -21,7 +39,7 @@ export default function UIEditNote(props) {
       position="relative"
       padding="0px 0px 0px 0px"
       backgroundColor="rgba(255,255,255,1)"
-      {...getOverrideProps(overrides, "UIEditNote")}
+      {...getOverrideProps(overrides, "UICreateNote")}
       {...rest}
     >
       <Flex
@@ -104,15 +122,46 @@ export default function UIEditNote(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="Edit"
-            {...getOverrideProps(overrides, "Edit")}
+            children="Create"
+            {...getOverrideProps(overrides, "Create")}
           ></Text>
         </Flex>
         <View
           width="unset"
           height="1px"
-          {...getOverrideProps(overrides, "Divider41111585")}
-        ></View>
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          shrink="0"
+          alignSelf="stretch"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          {...getOverrideProps(overrides, "Divider41161427")}
+        >
+          <Icon
+            width="272px"
+            height="0px"
+            viewBox={{ minX: 0, minY: 0, width: 272, height: 1 }}
+            paths={[
+              {
+                d: "M0 0L272 0L272 -1L0 -1L0 0Z",
+                stroke: "rgba(174,179,183,1)",
+                fillRule: "nonzero",
+                strokeWidth: 1,
+              },
+            ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
+            position="absolute"
+            top="calc(50% - 0px - 0.5px)"
+            left="0%"
+            right="0%"
+            {...getOverrideProps(overrides, "Line 141161428")}
+          ></Icon>
+        </View>
         <Flex
           gap="16px"
           direction="row"
@@ -187,7 +236,7 @@ export default function UIEditNote(props) {
             alignSelf="stretch"
             position="relative"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "TextField41111618")}
+            {...getOverrideProps(overrides, "TextField41161433")}
           >
             <Text
               fontFamily="Inter"
@@ -209,7 +258,7 @@ export default function UIEditNote(props) {
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
               children="name"
-              {...getOverrideProps(overrides, "label41111619")}
+              {...getOverrideProps(overrides, "label41161434")}
             ></Text>
             <Flex
               gap="0"
@@ -222,7 +271,7 @@ export default function UIEditNote(props) {
               alignSelf="stretch"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "InputGroup41111621")}
+              {...getOverrideProps(overrides, "InputGroup41161436")}
             >
               <Flex
                 gap="10px"
@@ -237,7 +286,7 @@ export default function UIEditNote(props) {
                 border="1px SOLID rgba(174,179,183,1)"
                 borderRadius="5px"
                 padding="8px 16px 8px 16px"
-                {...getOverrideProps(overrides, "Input41111622")}
+                {...getOverrideProps(overrides, "Input41161437")}
               >
                 <Text
                   fontFamily="Inter"
@@ -259,7 +308,7 @@ export default function UIEditNote(props) {
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
                   children="John Doe"
-                  {...getOverrideProps(overrides, "placeholder41111623")}
+                  {...getOverrideProps(overrides, "placeholder41161438")}
                 ></Text>
               </Flex>
             </Flex>
@@ -275,7 +324,7 @@ export default function UIEditNote(props) {
             alignSelf="stretch"
             position="relative"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "TextField41111625")}
+            {...getOverrideProps(overrides, "TextField41161440")}
           >
             <Text
               fontFamily="Inter"
@@ -297,7 +346,7 @@ export default function UIEditNote(props) {
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
               children="description"
-              {...getOverrideProps(overrides, "label41111626")}
+              {...getOverrideProps(overrides, "label41161441")}
             ></Text>
             <Flex
               gap="0"
@@ -310,7 +359,7 @@ export default function UIEditNote(props) {
               alignSelf="stretch"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "InputGroup41111628")}
+              {...getOverrideProps(overrides, "InputGroup41161443")}
             >
               <Flex
                 gap="10px"
@@ -325,7 +374,7 @@ export default function UIEditNote(props) {
                 border="1px SOLID rgba(174,179,183,1)"
                 borderRadius="5px"
                 padding="8px 16px 8px 16px"
-                {...getOverrideProps(overrides, "Input41111629")}
+                {...getOverrideProps(overrides, "Input41161444")}
               >
                 <Text
                   fontFamily="Inter"
@@ -347,7 +396,7 @@ export default function UIEditNote(props) {
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
                   children="Seattle, WA"
-                  {...getOverrideProps(overrides, "placeholder41111630")}
+                  {...getOverrideProps(overrides, "placeholder41161445")}
                 ></Text>
               </Flex>
             </Flex>
@@ -363,7 +412,7 @@ export default function UIEditNote(props) {
             alignSelf="stretch"
             position="relative"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "TextField41111632")}
+            {...getOverrideProps(overrides, "TextField41161447")}
           >
             <Text
               fontFamily="Inter"
@@ -385,7 +434,7 @@ export default function UIEditNote(props) {
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
               children="image"
-              {...getOverrideProps(overrides, "label41111633")}
+              {...getOverrideProps(overrides, "label41161448")}
             ></Text>
             <Flex
               gap="0"
@@ -398,7 +447,7 @@ export default function UIEditNote(props) {
               alignSelf="stretch"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "InputGroup41111635")}
+              {...getOverrideProps(overrides, "InputGroup41161450")}
             >
               <Flex
                 gap="10px"
@@ -413,7 +462,7 @@ export default function UIEditNote(props) {
                 border="1px SOLID rgba(174,179,183,1)"
                 borderRadius="5px"
                 padding="8px 16px 8px 16px"
-                {...getOverrideProps(overrides, "Input41111636")}
+                {...getOverrideProps(overrides, "Input41161451")}
               >
                 <Text
                   fontFamily="Inter"
@@ -435,7 +484,7 @@ export default function UIEditNote(props) {
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
                   children="john.doe@awsamplify.com"
-                  {...getOverrideProps(overrides, "placeholder41111637")}
+                  {...getOverrideProps(overrides, "placeholder41161452")}
                 ></Text>
               </Flex>
             </Flex>
@@ -444,13 +493,82 @@ export default function UIEditNote(props) {
         <View
           width="unset"
           height="1px"
-          {...getOverrideProps(overrides, "Divider41111593")}
-        ></View>
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          shrink="0"
+          alignSelf="stretch"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          {...getOverrideProps(overrides, "Divider41161454")}
+        >
+          <Icon
+            width="272px"
+            height="0px"
+            viewBox={{ minX: 0, minY: 0, width: 272, height: 1 }}
+            paths={[
+              {
+                d: "M0 0L272 0L272 -1L0 -1L0 0Z",
+                stroke: "rgba(174,179,183,1)",
+                fillRule: "nonzero",
+                strokeWidth: 1,
+              },
+            ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
+            position="absolute"
+            top="calc(50% - 0px - 0.5px)"
+            left="0%"
+            right="0%"
+            {...getOverrideProps(overrides, "Line 141161455")}
+          ></Icon>
+        </View>
         <Flex
+          gap="0"
+          direction="row"
           width="unset"
           height="unset"
+          justifyContent="center"
+          alignItems="center"
+          shrink="0"
+          position="relative"
+          border="1px SOLID rgba(0,0,0,0)"
+          borderRadius="4px"
+          padding="7px 15px 7px 15px"
+          backgroundColor="rgba(4,125,149,1)"
+          onClick={() => {
+            buttonOnClick();
+          }}
+          onMouseLeave={() => {
+            buttonOnMouseLeave();
+          }}
           {...getOverrideProps(overrides, "Button")}
-        ></Flex>
+        >
+          <Text
+            fontFamily="Inter"
+            fontSize="16px"
+            fontWeight="700"
+            color="rgba(255,255,255,1)"
+            lineHeight="24px"
+            textAlign="left"
+            display="block"
+            direction="column"
+            justifyContent="unset"
+            width="unset"
+            height="unset"
+            gap="unset"
+            alignItems="unset"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
+            children="Save"
+            {...getOverrideProps(overrides, "label41161458")}
+          ></Text>
+        </Flex>
       </Flex>
     </Flex>
   );

@@ -13,6 +13,6 @@ export { default as NoteCreateForm } from "./NoteCreateForm";
 export { default as NoteNavBar } from "./NoteNavBar";
 export { default as NoteUpdateForm } from "./NoteUpdateForm";
 export { default as SideBar } from "./SideBar";
+export { default as UICreateNote } from "./UICreateNote";
 export { default as UIEditNote } from "./UIEditNote";
-export { default as UINewNote } from "./UINewNote";
 export { default as studioTheme } from "./studioTheme";
