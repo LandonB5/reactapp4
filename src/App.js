@@ -12,7 +12,7 @@ class App extends Component {
     <div className="App"><header className="App-header">
 <Routes>
 <Route exact path='/' element={<div><NoteNavBar/><NoteCardCollection/></div>} />
-{<Route exact path='/new' element= {<UINewNote/>} /> }
+{<Route exact path='/new' element= {<UICreateNote/>} /> }
 
 </Routes>
 </header></div>
