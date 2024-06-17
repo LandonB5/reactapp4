@@ -5,7 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
-import { FlexProps, IconProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
+import { FlexProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
 } | null;
@@ -21,18 +21,16 @@ export declare type UINewNoteOverridesProps = {
     UINewNote?: PrimitiveOverrideProps<FlexProps>;
     Content?: PrimitiveOverrideProps<FlexProps>;
     "Edit Profile"?: PrimitiveOverrideProps<FlexProps>;
-    Icon?: PrimitiveOverrideProps<ViewProps>;
-    Vector?: PrimitiveOverrideProps<IconProps>;
-    Create?: PrimitiveOverrideProps<TextProps>;
-    Divider4050428?: PrimitiveOverrideProps<ViewProps>;
+    MyIcon?: PrimitiveOverrideProps<ViewProps>;
+    "New Note"?: PrimitiveOverrideProps<TextProps>;
     Profile?: PrimitiveOverrideProps<FlexProps>;
-    image?: PrimitiveOverrideProps<ImageProps>;
-    "Upload New Image"?: PrimitiveOverrideProps<TextProps>;
+    image?: PrimitiveOverrideProps<ViewProps>;
+    "Upload Image"?: PrimitiveOverrideProps<TextProps>;
     Forms?: PrimitiveOverrideProps<FlexProps>;
-    TextField4050433?: PrimitiveOverrideProps<FlexProps>;
-    TextField4050434?: PrimitiveOverrideProps<FlexProps>;
-    TextField4050435?: PrimitiveOverrideProps<FlexProps>;
-    Divider4050436?: PrimitiveOverrideProps<ViewProps>;
+    TextField41292484?: PrimitiveOverrideProps<FlexProps>;
+    TextField41292485?: PrimitiveOverrideProps<FlexProps>;
+    TextField41292486?: PrimitiveOverrideProps<FlexProps>;
+    TextField41292487?: PrimitiveOverrideProps<FlexProps>;
     Button?: PrimitiveOverrideProps<FlexProps>;
 } & EscapeHatchProps;
 export declare type UINewNoteProps = React.PropsWithChildren<Partial<FlexProps> & {

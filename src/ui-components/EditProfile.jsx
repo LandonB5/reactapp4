@@ -7,21 +7,22 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "./utils";
-import { Flex, Text, View } from "@aws-amplify/ui-react";
-export default function UINewNote(props) {
+import MyIcon from "./MyIcon";
+import { Button, Flex, Image, Text, TextField } from "@aws-amplify/ui-react";
+export default function EditProfile(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
       gap="16px"
       direction="column"
-      width="320px"
-      height="616px"
+      width="640px"
+      height="unset"
       justifyContent="flex-start"
       alignItems="flex-start"
       position="relative"
       padding="0px 0px 0px 0px"
       backgroundColor="rgba(255,255,255,1)"
-      {...getOverrideProps(overrides, "UINewNote")}
+      {...getOverrideProps(overrides, "EditProfile")}
       {...rest}
     >
       <Flex
@@ -48,13 +49,22 @@ export default function UINewNote(props) {
           alignSelf="stretch"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Edit Profile")}
+          {...getOverrideProps(overrides, "Edit Profile29766913")}
         >
-          <View
+          <MyIcon
             width="24px"
             height="24px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
+            overflow="hidden"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            type="close"
             {...getOverrideProps(overrides, "MyIcon")}
-          ></View>
+          ></MyIcon>
           <Text
             fontFamily="Inter"
             fontSize="16px"
@@ -73,8 +83,8 @@ export default function UINewNote(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="New Note"
-            {...getOverrideProps(overrides, "New Note")}
+            children="Edit Profile"
+            {...getOverrideProps(overrides, "Edit Profile29766916")}
           ></Text>
         </Flex>
         <Flex
@@ -90,7 +100,7 @@ export default function UINewNote(props) {
           padding="0px 0px 0px 0px"
           {...getOverrideProps(overrides, "Profile")}
         >
-          <View
+          <Image
             width="96px"
             height="96px"
             display="block"
@@ -101,9 +111,9 @@ export default function UINewNote(props) {
             position="relative"
             borderRadius="160px"
             padding="0px 0px 0px 0px"
-            backgroundImage="linear-gradient(-90deg, rgba(255,0,0,1), rgba(255,255,255,0))"
+            objectFit="cover"
             {...getOverrideProps(overrides, "image")}
-          ></View>
+          ></Image>
           <Text
             fontFamily="Inter"
             fontSize="16px"
@@ -123,8 +133,8 @@ export default function UINewNote(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="Upload Image"
-            {...getOverrideProps(overrides, "Upload Image")}
+            children="Upload New Image"
+            {...getOverrideProps(overrides, "Upload New Image")}
           ></Text>
         </Flex>
         <Flex
@@ -140,32 +150,56 @@ export default function UINewNote(props) {
           padding="0px 0px 0px 0px"
           {...getOverrideProps(overrides, "Forms")}
         >
-          <Flex
+          <TextField
             width="unset"
             height="unset"
-            {...getOverrideProps(overrides, "TextField41292484")}
-          ></Flex>
-          <Flex
+            label="Full name"
+            placeholder="John Doe"
+            shrink="0"
+            alignSelf="stretch"
+            size="default"
+            isDisabled={false}
+            labelHidden={false}
+            variation="default"
+            {...getOverrideProps(overrides, "TextField29766922")}
+          ></TextField>
+          <TextField
             width="unset"
             height="unset"
-            {...getOverrideProps(overrides, "TextField41292485")}
-          ></Flex>
-          <Flex
+            label="Location"
+            placeholder="Seattle, WA"
+            shrink="0"
+            alignSelf="stretch"
+            size="default"
+            isDisabled={false}
+            labelHidden={false}
+            variation="default"
+            {...getOverrideProps(overrides, "TextField29766923")}
+          ></TextField>
+          <TextField
             width="unset"
             height="unset"
-            {...getOverrideProps(overrides, "TextField41292486")}
-          ></Flex>
-          <Flex
-            width="unset"
-            height="unset"
-            {...getOverrideProps(overrides, "TextField41292487")}
-          ></Flex>
+            label="Email"
+            placeholder="john.doe@awsamplify.com"
+            shrink="0"
+            alignSelf="stretch"
+            size="default"
+            isDisabled={false}
+            labelHidden={false}
+            variation="default"
+            {...getOverrideProps(overrides, "TextField29766924")}
+          ></TextField>
         </Flex>
-        <Flex
+        <Button
           width="unset"
           height="unset"
+          shrink="0"
+          size="default"
+          isDisabled={false}
+          variation="primary"
+          children="Save"
           {...getOverrideProps(overrides, "Button")}
-        ></Flex>
+        ></Button>
       </Flex>
     </Flex>
   );

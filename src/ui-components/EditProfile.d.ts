@@ -5,7 +5,8 @@
  **************************************************************************/
 
 import * as React from "react";
-import { ButtonProps, FlexProps, IconProps, ImageProps, TextFieldProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
+import { MyIconProps } from "./MyIcon";
+import { ButtonProps, FlexProps, ImageProps, TextFieldProps, TextProps } from "@aws-amplify/ui-react";
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
 } | null;
@@ -17,27 +18,22 @@ export declare type Variant = {
     overrides: EscapeHatchProps;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type UICreateNoteOverridesProps = {
-    UICreateNote?: PrimitiveOverrideProps<FlexProps>;
+export declare type EditProfileOverridesProps = {
+    EditProfile?: PrimitiveOverrideProps<FlexProps>;
     Content?: PrimitiveOverrideProps<FlexProps>;
-    "Edit Profile"?: PrimitiveOverrideProps<FlexProps>;
-    Icon?: PrimitiveOverrideProps<ViewProps>;
-    Vector?: PrimitiveOverrideProps<IconProps>;
-    "Create New Note"?: PrimitiveOverrideProps<TextProps>;
-    Divider?: PrimitiveOverrideProps<ViewProps>;
-    "Line 141302024"?: PrimitiveOverrideProps<IconProps>;
+    "Edit Profile29766913"?: PrimitiveOverrideProps<FlexProps>;
+    MyIcon?: MyIconProps;
+    "Edit Profile29766916"?: PrimitiveOverrideProps<TextProps>;
     Profile?: PrimitiveOverrideProps<FlexProps>;
     image?: PrimitiveOverrideProps<ImageProps>;
     "Upload New Image"?: PrimitiveOverrideProps<TextProps>;
-    TextField41302077?: PrimitiveOverrideProps<TextFieldProps>;
-    TextField41302084?: PrimitiveOverrideProps<TextFieldProps>;
-    TextField41302056?: PrimitiveOverrideProps<TextFieldProps>;
-    "Line 141302032"?: PrimitiveOverrideProps<IconProps>;
+    Forms?: PrimitiveOverrideProps<FlexProps>;
+    TextField29766922?: PrimitiveOverrideProps<TextFieldProps>;
+    TextField29766923?: PrimitiveOverrideProps<TextFieldProps>;
+    TextField29766924?: PrimitiveOverrideProps<TextFieldProps>;
     Button?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
-export declare type UICreateNoteProps = React.PropsWithChildren<Partial<FlexProps> & {
-    Notes?: any;
-} & {
-    overrides?: UICreateNoteOverridesProps | undefined | null;
+export declare type EditProfileProps = React.PropsWithChildren<Partial<FlexProps> & {
+    overrides?: EditProfileOverridesProps | undefined | null;
 }>;
-export default function UICreateNote(props: UICreateNoteProps): React.ReactElement;
+export default function EditProfile(props: EditProfileProps): React.ReactElement;
