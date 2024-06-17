@@ -2,8 +2,8 @@ export type AmplifyDependentResourcesAttributes = {
   "api": {
     "reactapp4": {
       "GraphQLAPIEndpointOutput": "string",
-      "GraphQLAPIIdOutput": "string",
-      "GraphQLAPIKeyOutput": "string"
+      "GraphQLAPIIdOutput": "string"
+     // "GraphQLAPIKeyOutput": "string"
     }
   },
   "auth": {
