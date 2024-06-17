@@ -4,7 +4,7 @@ import { withAuthenticator } from '@aws-amplify/ui-react';
 import {NoteNavBar, NoteCardCollection, NoteCreateForm, UICreateNote, WelcomePage} from "./ui-components";
 import {Routes, Route} from 'react-router-dom'
 //import NewNote from './NewNote'
-
+// We began this June 16th 2024
 class App extends Component {
 
   render() {
